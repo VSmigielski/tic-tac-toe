@@ -88,7 +88,7 @@ function Square(props) {
               'Go to game start';
             return (
               <li key={move}>
-                <button class="mt-1" onClick={() => this.jumpTo(move)}>{desc}</button>
+                <button className="mt-1" onClick={() => this.jumpTo(move)}>{desc}</button>
               </li>
             );
           });
@@ -100,15 +100,15 @@ function Square(props) {
             status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
         }
       return (
-        <div class="container mt-5 p-5 rounded bg-light">
+        <div className="container mt-5 p-5 rounded bg-light">
             <div className="game">
                 <div className="game-board">
                     <Board squares={current.squares}
                     onClick={(i) => this.handleClick(i)} />
                 </div>
                 <div className="game-info">
-                    <div class="ms-4 text-center">{status}</div>
-                    <ol class="text-center">{moves}</ol>
+                    <div className="ms-4 text-center">{status}</div>
+                    <ol className="text-center">{moves}</ol>
                 </div>
             </div>
         </div>
